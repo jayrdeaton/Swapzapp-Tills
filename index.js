@@ -7,8 +7,8 @@ let cosmetic = require('cosmetic'),
 
 let run = async(args) => {
   console.log(`Welcome to ${cosmetic.cyan('Swapzapp-Tills')}`);
-  // let dir = await prompt('Directory: ');
-  let dir = "/Users/jaydeaton/Downloads/Tills"
+  let dir = await prompt('Directory: ');
+  // let dir = "/Users/jaydeaton/Downloads/Tills"
   let paths = await readDir(dir);
   for (let path of paths) {
     if (extname(path) !== '.csv') {
